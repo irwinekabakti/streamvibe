@@ -4,6 +4,7 @@ import { Container, HeadingTitle, Paragraph } from "@/styles/global/default";
 import { ShowsBannerWrapper } from "./style";
 import { FiExternalLink } from "react-icons/fi";
 import { MdLanguage } from "react-icons/md";
+import Image from "next/image";
 
 const ShowsBanner = ({ showData }: any) => {
   return (
@@ -35,7 +36,7 @@ const ShowsBanner = ({ showData }: any) => {
               </BaseLinkPrimary>
               <div className="flex items-center flex-wrap banner-info-item">
                 <Paragraph>
-                  <span className="font-bold text-white">Genre:</span>
+                  <span className="font-bold text-white">Genre: </span>
                   <span className="font-semibold">
                     {showData?.genres?.join(", ")}
                   </span>
@@ -51,7 +52,7 @@ const ShowsBanner = ({ showData }: any) => {
                   </li>
                   <li className="inline-flex items-center info-item">
                     <span className="info-item-icon inline-flex items-center justify-center">
-                      <img src={Icons.Star} alt="" />
+                      <Image src={Icons.Star} alt="icon-star" />
                     </span>
                     <span className="info-item-value">
                       {showData?.rating?.average}
@@ -68,7 +69,3 @@ const ShowsBanner = ({ showData }: any) => {
 };
 
 export default ShowsBanner;
-
-// ShowsBanner.propTypes = {
-//   showData: PropTypes.object.isRequired,
-// };

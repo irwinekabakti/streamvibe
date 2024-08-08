@@ -7,6 +7,7 @@ import { Container } from "@/styles/global/default";
 import ShowsItem from "../ShowsItem/ShowsItem";
 import { DEFAULT_SHOWS } from "@/constant/shows-constant";
 import { Icons } from "@/assets/icons";
+import Image from "next/image";
 
 const ShowsList = ({ showsData, showsTitle }: any) => {
   // pagination
@@ -52,7 +53,7 @@ const ShowsList = ({ showsData, showsTitle }: any) => {
             // disabled={currentPage === 1 ? "disabled" : ""}
             disabled={currentPage === 1 ? true : false}
             onClick={handlePrevPage}>
-            <img src={Icons.ArrowLeft} alt="" />
+            <Image src={Icons.ArrowLeft} alt="arrow-left-icon" />
           </button>
           <ul className="flex items-center">
             {Array.from({ length: totalPages }, (_, index) => {
@@ -77,7 +78,7 @@ const ShowsList = ({ showsData, showsTitle }: any) => {
             className="paginate-btn paginate-next inline-flex items-center justify-center"
             disabled={currentPage === totalPages ? true : false}
             onClick={handleNextPage}>
-            <img src={Icons.ArrowRight} alt="" />
+            <Image src={Icons.ArrowRight} alt="arrow-right-icon" />
           </button>
         </PaginationWrapper>
       </Container>
