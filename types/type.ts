@@ -123,3 +123,16 @@ export interface BaseLinkSecondaryProps {
   className?: string;
   children?: React.ReactNode;
 }
+
+export interface FooterLinkItemProps {
+  link_name: string;
+  link_url: string;
+  link_icon?: string;
+}
+
+export interface FooterLinkSectionProps {
+  id: string;
+  link_title: string;
+  link_type: "text" | "icon" | string | any;
+  links: FooterLinkItemProps[];
+}

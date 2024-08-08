@@ -8,10 +8,11 @@ import StreamDevices from "../_components/Home/StreamDevice/StreamDevice";
 import CommonQuestions from "../_components/Home/CommonQuestion/CommonQuestion";
 import Subscription from "../_components/Home/Subscription/Subscription";
 import FreeTrial from "../_components/FreeTrial/FreeTrial";
+import Layout from "../_components/(shared)/Layout";
 
 const Home: FC = () => {
   return (
-    <div>
+    <Layout>
       <GlobalStyles />
       <Banner />
       <Genre />
@@ -19,9 +20,7 @@ const Home: FC = () => {
       <CommonQuestions />
       <Subscription />
       <FreeTrial />
-
-      {/* <h1>Test</h1> */}
-    </div>
+    </Layout>
   );
 };
 

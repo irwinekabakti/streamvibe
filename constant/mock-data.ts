@@ -1,3 +1,4 @@
+import { FooterLinkSectionProps } from "@/types/type";
 import { Icons } from "../assets/icons";
 import { Images } from "../assets/images";
 
@@ -152,7 +153,7 @@ export const SUBSCRIPTIONS = [
   },
 ];
 
-export const FOOTER_LINKS = [
+export const FOOTER_LINKS: FooterLinkSectionProps[] = [
   {
     id: "home_links",
     link_title: "Home",
