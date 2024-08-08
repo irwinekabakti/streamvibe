@@ -1,10 +1,14 @@
 import React, { FC } from "react";
 import Image from "next/image";
+import { GlobalStyles } from "@/styles/global/GlobalStyles";
+import Banner from "../_components/Home/Banner/Banner";
 
 const Home: FC = () => {
   return (
     <div>
-      <h1>Test</h1>
+      <GlobalStyles />
+      <Banner />
+      {/* <h1>Test</h1> */}
     </div>
   );
 };
