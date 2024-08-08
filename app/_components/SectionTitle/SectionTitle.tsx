@@ -24,7 +24,7 @@ const SectionTitle: FC<SectionTitleProps> = ({
           </div>
           <div className="title-right">
             {rightContenType === "title-button" && (
-              <BaseLinkPrimary>
+              <BaseLinkPrimary href="/">
                 <span className="btn-text">Ask a Question</span>
               </BaseLinkPrimary>
             )}

@@ -1,14 +1,13 @@
 "use client";
 
-import { FC, useState } from "react";
-import Image from "next/image";
+import { FC } from "react";
 import { FAQS } from "@/constant/mock-data";
-import { Container, Paragraph } from "@/styles/global/default";
+import { Container } from "@/styles/global/default";
 import SectionTitle from "../../SectionTitle/SectionTitle";
-import { CommonQItemWrapper, CommonQWrapper } from "./style";
-import { Icons } from "@/assets/icons";
+import { CommonQWrapper } from "./style";
+import CommonQuestionItem from "./CommonQuestionItem";
 
-const CommonQuestions: FC<any> = () => {
+const CommonQuestions: FC = () => {
   let halfValue = Math.ceil(FAQS.length / 2);
 
   return (
@@ -57,39 +56,3 @@ const CommonQuestions: FC<any> = () => {
 };
 
 export default CommonQuestions;
-
-const CommonQuestionItem: FC<any> = ({ data, count }) => {
-  const tempIndex = count < 10 ? `0${count}` : count;
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
-  const handleAccordion = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
-  return (
-    <CommonQItemWrapper className="item">
-      <div className="item-grid grid">
-        <div className="item-sn bg-black12 text-white flex items-center justify-center text-xl font-semibold">
-          {tempIndex}
-        </div>
-        <div className="item-body">
-          <div
-            className="item-head flex justify-between items-start"
-            onClick={handleAccordion}>
-            <h4 className="item-title text-xl">{data.question}</h4>
-            <button className="item-btn bg-transparent">
-              {isCollapsed ? (
-                <Image src={Icons.Plus} alt="icon-plus" rel="preload" />
-              ) : (
-                <Image src={Icons.Minus} alt="icon-minus" rel="preload" />
-              )}
-            </button>
-          </div>
-          <div className={`item-text ${!isCollapsed ? "show" : ""}`}>
-            <Paragraph>{data.answer}</Paragraph>
-          </div>
-        </div>
-      </div>
-    </CommonQItemWrapper>
-  );
-};

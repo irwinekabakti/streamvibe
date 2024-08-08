@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import Link from "next/link";
 import { media, theme } from "../theme/theme";
 import { AnchorHTMLAttributes } from "react";
+import { BaseLinkPrimaryProps, BaseLinkSecondaryProps } from "@/types/type";
 
 const commonButtonStyles = css`
   font-family: inherit;
@@ -76,7 +77,7 @@ const BaseButtonPrimary = styled(BaseButton)`
   border-color: ${theme.colors.primary};
 `;
 
-const BaseLinkPrimary = styled(BaseLink)<any>`
+const BaseLinkPrimary = styled(BaseLink)<BaseLinkPrimaryProps>`
   background-color: ${theme.colors.primary};
   border-color: ${theme.colors.primary};
 `;
@@ -86,7 +87,7 @@ const BaseButtonSecondary = styled(BaseButton)`
   border-color: ${theme.colors.black15};
 `;
 
-const BaseLinkSecondary = styled(BaseLink)`
+const BaseLinkSecondary = styled(BaseLink)<BaseLinkSecondaryProps>`
   background-color: ${theme.colors.secondary};
   border-color: ${theme.colors.black15};
 `;

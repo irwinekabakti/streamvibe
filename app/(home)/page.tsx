@@ -6,6 +6,7 @@ import Banner from "../_components/Home/Banner/Banner";
 import Genre from "../_components/Genre/Genre";
 import StreamDevices from "../_components/Home/StreamDevice/StreamDevice";
 import CommonQuestions from "../_components/Home/CommonQuestion/CommonQuestion";
+import Subscription from "../_components/Home/Subscription/Subscription";
 
 const Home: FC = () => {
   return (
@@ -15,6 +16,7 @@ const Home: FC = () => {
       <Genre />
       <StreamDevices />
       <CommonQuestions />
+      <Subscription />
 
       {/* <h1>Test</h1> */}
     </div>

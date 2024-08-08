@@ -111,3 +111,15 @@ export interface Genre {
   thumbnail: StaticImageData | any;
   name: string;
 }
+
+export interface BaseLinkPrimaryProps {
+  href?: string;
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export interface BaseLinkSecondaryProps {
+  href?: string;
+  className?: string;
+  children?: React.ReactNode;
+}
