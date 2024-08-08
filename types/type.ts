@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Theme {
   colors: {
     primary: string;
@@ -102,4 +104,10 @@ export interface Theme {
     full: string;
     fadeOut: string;
   };
+}
+
+export interface Genre {
+  id: string;
+  thumbnail: StaticImageData | any;
+  name: string;
 }

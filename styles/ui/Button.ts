@@ -1,7 +1,9 @@
 "use client";
+
 import styled, { css } from "styled-components";
 import Link from "next/link";
 import { media, theme } from "../theme/theme";
+import { AnchorHTMLAttributes } from "react";
 
 const commonButtonStyles = css`
   font-family: inherit;
@@ -74,7 +76,7 @@ const BaseButtonPrimary = styled(BaseButton)`
   border-color: ${theme.colors.primary};
 `;
 
-const BaseLinkPrimary = styled(BaseLink)`
+const BaseLinkPrimary = styled(BaseLink)<any>`
   background-color: ${theme.colors.primary};
   border-color: ${theme.colors.primary};
 `;
