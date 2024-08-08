@@ -5,7 +5,7 @@ import { SectionTitleWrapper } from "./style";
 
 interface SectionTitleProps {
   title: string | any;
-  text: string | any;
+  text?: string | any;
   rightContenType?: string | object | any;
 }
 
