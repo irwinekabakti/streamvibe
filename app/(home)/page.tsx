@@ -5,6 +5,7 @@ import { GlobalStyles } from "@/styles/global/GlobalStyles";
 import Banner from "../_components/Home/Banner/Banner";
 import Genre from "../_components/Genre/Genre";
 import StreamDevices from "../_components/Home/StreamDevice/StreamDevice";
+import CommonQuestions from "../_components/Home/CommonQuestion/CommonQuestion";
 
 const Home: FC = () => {
   return (
@@ -13,6 +14,7 @@ const Home: FC = () => {
       <Banner />
       <Genre />
       <StreamDevices />
+      <CommonQuestions />
 
       {/* <h1>Test</h1> */}
     </div>

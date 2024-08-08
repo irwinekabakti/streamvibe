@@ -4,9 +4,9 @@ import { Container, HeadingTitle, Paragraph } from "@/styles/global/default";
 import { SectionTitleWrapper } from "./style";
 
 interface SectionTitleProps {
-  title: string;
-  text: string;
-  rightContenType?: any;
+  title: string | any;
+  text: string | any;
+  rightContenType?: string | object | any;
 }
 
 const SectionTitle: FC<SectionTitleProps> = ({
