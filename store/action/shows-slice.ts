@@ -43,7 +43,7 @@ export const fetchAllShows = createAsyncThunk(
 
 export const fetchSearchResults = createAsyncThunk(
   "shows/fetch/search",
-  async (query: any, thunkAPI: any) => {
+  async (query: string, thunkAPI: any) => {
     try {
       return await showsService.fetchSearchResults(query);
     } catch (error) {
